@@ -1,0 +1,42 @@
+JavaDatePicker
+Copyright (C) 2003 Brenda Bell
+
+Release Notes
+-------------
+
+    Release RC1, 8 July 2003:
+
+        - Initial release under the GNU Public License (GPL)
+
+Manifest
+--------
+
+    src\com\theotherbell\ui\DateField.java
+    src\com\theotherbell\ui\DatePicker.java
+
+Dependencies
+------------
+
+    DateField and DatePicker are dependent on the Absolute Layout Manager
+    distributed as part of the NetBeans IDE.  The NetBeans classes are
+    licensed under the Sun Public License.
+    For more information about the SPL, please visit http://www.sun.com.
+    For more information about NetBeans, please visit http://www.netbeans.org.
+
+    DateField and DatePicker have been tested with the Absolute Layout
+    Manager distributed with NetBeans IDE version 3.5.1.
+
+    Sun, Sun Microsystems, the Sun Logo, Java and NetBeans are trademarks
+    or registered trademarks of Sun Microsystems, Inc. in the United
+    States and other countries.
+
+JavaDatePicker Web Site
+-----------------------
+
+    http://opensource.theotherbell.com/php/datepicker.php
+
+Bug Reports and Feedback
+------------------------
+
+    Please send bug reports and feedback to: Brenda Bell (b311b-javadatepicker@theotherbell.com).
+

@@ -1,0 +1,106 @@
+Train data SETUP ONE:
+-- has been run on the time interval:
+2011-10-03 10:00:00 - 2011-10-04 12:50:00
+
+It contains two main workflows: GWAS and LLD.
+Each of these two workflows use the plugin SOStoVBtransformer.
+
+We have modified the SOStoVBtransformer plugin and we have added a medium cpuLoad and a high cpu load code to it, hence we have obtained the following workflows:
+
+(w1) -- GWAS the original workflow -- with no CPU load added. It has the workflowClass:
+ urn:eu.larkc.plugin.SOStoVBtransformer_urn:eu.larkc.plugin.identifier.gwas.GWASIdentifier_
+
+(w2) -- GWAS  the workflow for which we have added a medium CPU load code into the SOStoVBtransformer plugin; It has the workflowClass:
+ urn:eu.larkc.plugin.SOStoVBtransformerCPULoad_urn:eu.larkc.plugin.identifier.gwas.GWASIdentifier_
+
+(w3) -- GWAS  the workflow for which we have added a high CPU load code into the SOStoVBtransformer plugin; It has the workflowClass:
+ urn:eu.larkc.plugin.SOStoVBtransformerThreadsCPULoad_urn:eu.larkc.plugin.identifier.gwas.GWASIdentifier_
+ 
+(w4) -- LLD the original workflow -- with no CPU load added. It has the workflowClass:
+urn:eu.larkc.plugin.LLDReasoner; urn:eu.larkc.plugin.SOStoVBtransformer; 
+
+(w5) -- LLD  the workflow for which we have added a medium CPU load code into the SOStoVBtransformer plugin; It has the workflowClass:
+urn:eu.larkc.plugin.LLDReasoner; urn:eu.larkc.plugin.SOStoVBtransformerCPULoad; 
+
+Test data SETUP ONE:
+
+-- it is extracted on gwas and on LLD -- on several types of queries 
+
+(a) t2d with 100 SNP ids - 415 test queries
+2011-10-04 12:52:00 - 2011-10-04 13:06:00
+
+(b) breast cancer with 1 snp ids - 210 test queries
+2011-10-04 13:09:00 - 2011-10-04 13:16:00
+
+(c) kidney cancer with 10 snp ids - 210 test queries
+ 2011-10-04 13:23:00 - 2011-10-04 13:29:00
+ 
+(d) lung cancer with 50 snp ids - 210 test queries
+2011-10-04 13:31:00 - 2011-10-04 13:37:00
+
+(e) prostate cancer with 100 SNP ids - 210 test queries
+2011-10-04 13:40:00 - 2011-10-04 13:47:00
+
+(f) LLD -- test queries - 210 test queries
+
+The time interval during which the test queries have been run is
+(a) 2011-10-04 12:52:00 - 2011-10-04 13:06:00
+(b) 2011-10-04 13:09:00 - 2011-10-04 13:16:00
+(c) 2011-10-04 13:23:00 - 2011-10-04 13:29:00
+(d) 2011-10-04 13:31:00 - 2011-10-04 13:37:00
+(e) 2011-10-04 13:40:00 - 2011-10-04 13:47:00
+(f) 2011-10-04 13:55:00 - 2011-10-04 14:03:00
+
+The best configuration workflow should be (w1) for the test queries (a) to (e) in this test data set.
+ 
+The best configuration workflow should be (w4) for the test queries in  (f).
+ 
+ 
+
+TRAIN DATA SETUP 2:
+//WE MAY CONSIDER AS INPUT THE SYSTEM METRICS !
+ 
+We get a lower number of queries -- of about 5500 (for ADINA) in the time frame: 
+2011-10-06 01:00 -- 2011-10-07 07:00 -- THIS INTERVAL HAS BEEN USED FOR TRAINING
+
+// As a remark, the queries have been run in the time frame:  2011-10-06 00:21 -- 2011-10-07 11:00 -- IT CONTAINS 6119 QUERIES
+ 
+ 
+ It contains 4 workflows:
+1) Run Path finder as it is
+
+2) Run path finder as it is but on a machine that has a high cpu load (that is I run in parallel a program that adds plenty of CPU Load).
+
+3) Run path finder modified -- with a plugin having high cpu load on a system that is not loaded
+I have modified the plugin: OpResPathFinderReasonerThreadCPULoad
+
+4) Run path finder modified -- with a plugin having high cpu load on a system that is highly loaded
+I have modified the plugin: OpResPathFinderReasonerThreadCPULoad
+ 
+ 
+TEST DATA SETUP 2:
+
+The test data has been run during the time interval: 2011-10-07 11:05 -- 2011-10-07 17:00
+
+We have four test sets, for each of the 4 workflows above:
+1) Run Path finder as it is
+test -- 241 queries
+time interval : 2011-10-07 11:05 -- 2011-10-07 11:50
+
+2) Run path finder as it is but on a machine that has a high cpu load (that is I run in parallel a program that adds plenty of CPU Load).
+test -- the same 200 queries
+time interval : 2011-10-07 11:51 -- 2011-10-07 12:06
+
+3) Run path finder modified -- with a plugin having high cpu load on a system that is not loaded
+I have modified the plugin: OpResPathFinderReasonerThreadCPULoad
+train -- 200 queries
+2011-10-07 13:30 -- 2011-10-07 15:00
+
+4) Run path finder modified -- with a plugin having high cpu load on a system that is highly loaded; I have modified the plugin: OpResPathFinderReasonerThreadCPULoad
+train -- 200 queries
+2011-10-07 15:02 -- 2011-10-07 17:00
+
+ 
+ 
+ 
+ 

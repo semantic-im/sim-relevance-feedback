@@ -1,0 +1,7 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns/>  PREFIX lud: <http://www.linkingurbandata.org/onto/ama/>  SELECT ?p ?w ?n1 ?l ?n2  WHERE {  ?p rdf:type lud:Paths.  ?p lud:pathFrom <http://seip.cefriel.it/ama/resource/nodes/node8252>.  ?p lud:pathTo <http://seip.cefriel.it/ama/resource/nodes/node8669>.  ?p lud:contain ?l.  ?l lud:from ?n1.  ?l lud:to ?n2.  ?p lud:pathWeight ?w.  }ORDER BY ?w
+
+SELECT ?s ?p ?o WHERE { { ?s ?p ?o . ?s ?p "Kidney Cancer"} }
+
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX gwas: <http://www.gate.ac.uk/gwas#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> SELECT * WHERE {  gwas:x rdf:type gwas:Experiment .  gwas:x gwas:hasName "experiment1" .   gwas:x gwas:hasKeywordGroup gwas:g1 .   gwas:g1 gwas:hasKeyword "type 2" .   gwas:g1 gwas:hasKeyword "diabetes" .  gwas:x gwas:searchInRif "false" . gwas:x gwas:useUMLS "false" .  gwas:x gwas:searchMode "1" .  gwas:x gwas:dateConstraint "20110412" .gwas:x gwas:hasSnpId "rs10199844" .gwas:x gwas:hasSnpId "rs10199845" .gwas:x gwas:hasSnpId "rs10199849" .gwas:x gwas:hasSnpId "rs10199852" .gwas:x gwas:hasSnpId "rs10199855" .gwas:x gwas:hasSnpId "rs10199857" .gwas:x gwas:hasSnpId "rs10199858" .gwas:x gwas:hasSnpId "rs10199862" .gwas:x gwas:hasSnpId "rs10199863" .gwas:x gwas:hasSnpId "rs10199864" .gwas:x gwas:hasSnpId "rs10199867" .gwas:x gwas:hasSnpId "rs10199868" .gwas:x gwas:hasSnpId "rs1019987" .gwas:x gwas:hasSnpId "rs10199870" .gwas:x gwas:hasSnpId "
+
